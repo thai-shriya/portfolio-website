@@ -1,3 +1,2 @@
+# Shriya Thai - Portfolio Website
 
-  # Build Portfolio Website
-  
