@@ -217,6 +217,10 @@ export default function App() {
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
                   <span>Built and deployed Node.js microservices to handle LLM orchestration, decoupling the AI logic from the main application server to ensure independent scalability.</span>
                 </li>
+                <li className="flex gap-3">
+                  <span className="text-[#2d5f3f] mt-1.5">•</span>
+                  <span>Integrated Stripe payment infrastructure to power subscription billing and one-time transactions, implementing secure webhook handlers and payment intent flows for seamless user checkout experiences.</span>
+                </li>
               </ul>
             </div>
 
