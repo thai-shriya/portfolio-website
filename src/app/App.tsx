@@ -2,6 +2,7 @@ import { Download, Linkedin, Mail, Phone } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
 import profileImage from '../assets/profile.jpg';
+import resumePdf from '../assets/ShriyaThai_SWE_Resume.pdf';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -51,11 +52,10 @@ export default function App() {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-sm transition-colors ${
-                    activeSection === item.toLowerCase()
-                      ? 'text-[#2d5f3f] font-medium'
-                      : 'text-[#4a4a4a] hover:text-[#2d5f3f]'
-                  }`}
+                  className={`text-sm transition-colors ${activeSection === item.toLowerCase()
+                    ? 'text-[#2d5f3f] font-medium'
+                    : 'text-[#4a4a4a] hover:text-[#2d5f3f]'
+                    }`}
                 >
                   {item}
                 </button>
@@ -107,14 +107,14 @@ export default function App() {
                 AI Fullstack Software Engineer
               </p>
               <p className="text-lg text-[#4a4a4a] max-w-3xl leading-relaxed mb-8">
-                Software Engineer with 3+ years of experience engineering high-performance microservices 
-                and AI-driven infrastructure. Specialized in designing scalable API architectures and 
+                Software Engineer with 3+ years of experience engineering high-performance microservices
+                and AI-driven infrastructure. Specialized in designing scalable API architectures and
                 orchestrating production-grade LLM workflows.
               </p>
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
                 <a
-                  href="#" 
-                  download
+                  href={resumePdf}
+                  download="ShriyaThai_Resume.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[#2d5f3f] text-white rounded-lg hover:bg-[#234a32] transition-colors"
                 >
                   <Download size={18} />
@@ -149,31 +149,31 @@ export default function App() {
               <div className="space-y-4 p-6 rounded-lg hover:bg-[#fafaf8] hover:shadow-sm transition-all duration-300 cursor-default">
                 <h3 className="text-lg font-semibold text-[#2d5f3f] mb-3">Backend & APIs</h3>
                 <p className="text-[#4a4a4a] leading-relaxed">
-                  Java (Spring Boot), Node.js (Express), RESTful Architecture, Microservices, OAuth/JWT
+                  Java (Spring Boot), Node.js (Express), Python, RESTful API Design
+                </p>
+              </div>
+              <div className="space-y-4 p-6 rounded-lg hover:bg-[#fafaf8] hover:shadow-sm transition-all duration-300 cursor-default">
+                <h3 className="text-lg font-semibold text-[#2d5f3f] mb-3">Frontend</h3>
+                <p className="text-[#4a4a4a] leading-relaxed">
+                  React.js, TypeScript, JavaScript, CSS3, HTML5
                 </p>
               </div>
               <div className="space-y-4 p-6 rounded-lg hover:bg-[#fafaf8] hover:shadow-sm transition-all duration-300 cursor-default">
                 <h3 className="text-lg font-semibold text-[#2d5f3f] mb-3">AI Infrastructure</h3>
                 <p className="text-[#4a4a4a] leading-relaxed">
-                  LLM Orchestration, RAG Pipelines, Vector Databases (Pinecone, Chroma), LangChain, MCP
+                  LLM Orchestration, RAG Pipelines, Vector Databases (Pinecone), LangChain, MCP, PyTorch
                 </p>
               </div>
               <div className="space-y-4 p-6 rounded-lg hover:bg-[#fafaf8] hover:shadow-sm transition-all duration-300 cursor-default">
                 <h3 className="text-lg font-semibold text-[#2d5f3f] mb-3">Data & Storage</h3>
                 <p className="text-[#4a4a4a] leading-relaxed">
-                  SQL (PostgreSQL, MySQL), Redis (Caching), Databricks Mosaic AI
+                  SQL (PostgreSQL, MySQL), Redis (Caching), Database Indexing & Optimization
                 </p>
               </div>
               <div className="space-y-4 p-6 rounded-lg hover:bg-[#fafaf8] hover:shadow-sm transition-all duration-300 cursor-default">
                 <h3 className="text-lg font-semibold text-[#2d5f3f] mb-3">DevOps & Cloud</h3>
                 <p className="text-[#4a4a4a] leading-relaxed">
-                  AWS (Lambda, EC2, S3), Docker, Kubernetes, CI/CD, Git
-                </p>
-              </div>
-              <div className="space-y-4 p-6 rounded-lg hover:bg-[#fafaf8] hover:shadow-sm transition-all duration-300 cursor-default">
-                <h3 className="text-lg font-semibold text-[#2d5f3f] mb-3">Languages</h3>
-                <p className="text-[#4a4a4a] leading-relaxed">
-                  Java, JavaScript, TypeScript, SQL, Python
+                  AWS (Bedrock, EC2, S3), Docker, Kubernetes, CI/CD, Git
                 </p>
               </div>
             </div>
@@ -191,12 +191,12 @@ export default function App() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold text-[#1a1a1a] mb-12 hover:text-[#2d5f3f] transition-colors duration-300 cursor-default">Experience</h2>
-            
+
             {/* BotPoint */}
             <div className="mb-12 pb-12 border-b border-[#2d5f3f]/10 last:border-0 p-6 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300 -mx-6">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                 <div>
-                  <h3 className="text-xl font-semibold text-[#1a1a1a]">AI Software Engineer</h3>
+                  <h3 className="text-xl font-semibold text-[#1a1a1a]">AI Engineer — AI Platform Engineering</h3>
                   <p className="text-[#2d5f3f] font-medium">BotPoint</p>
                 </div>
                 <div className="text-[#4a4a4a] mt-2 md:mt-0">
@@ -207,19 +207,23 @@ export default function App() {
               <ul className="space-y-3 text-[#4a4a4a] leading-relaxed">
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Architecting the core semantic search engine for a builder-investor platform, designing the backend logic to index and retrieve project data with high relevance.</span>
+                  <span>Architected and scaled a comprehensive AI platform to 2,000+ users, designing the system for high availability and seamless full-stack performance.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Engineered a RAG pipeline, handling data ingestion from unstructured sources into structured vector stores (Pinecone), improving query accuracy by ∼30%.</span>
+                  <span>Engineered a core AI Sandbox feature for advanced context engineering, serving as the platform’s primary technical driver for custom AI workflows.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Built and deployed Node.js microservices to handle LLM orchestration, decoupling the AI logic from the main application server to ensure independent scalability.</span>
+                  <span>Developed an AI-driven RSS Reader powered by Groq, allowing users to interactively query live feeds and receive instant, concise news synthesis.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Integrated Stripe payment infrastructure to power subscription billing and one-time transactions, implementing secure webhook handlers and payment intent flows for seamless user checkout experiences.</span>
+                  <span>Designed and implemented mission-critical features, including Role-Based Access Control and Stripe payment pipelines.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-[#2d5f3f] mt-1.5">•</span>
+                  <span>Optimized full-stack performance, specifically enhancing database indexing and frontend rendering to accelerate data retrieval and improve UX responsiveness.</span>
                 </li>
               </ul>
             </div>
@@ -239,23 +243,23 @@ export default function App() {
               <ul className="space-y-3 text-[#4a4a4a] leading-relaxed">
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Architected a custom Model Context Protocol (MCP) server (Node.js/TypeScript) to integrate internal APIs and local file systems with the Windsurf IDE, resulting in a 30% boost in developer velocity.</span>
+                  <span>Architected a Node.js MCP with AI agents enabling secure real-time data retrieval and automating 65% of technical troubleshooting workflows.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Trained and deployed a domain-specific foundation model on Databricks (Mosaic AI) using a dataset of 500k+ internal interactions, automating 65% of Tier-1 support queries and reducing average resolution time from hours to seconds.</span>
+                  <span>Optimized shared database throughput for 100K+ monthly requests by implementing Redis look-aside caching and refactoring legacy SQL joins, reducing P99 latency by 25%.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Developed a multi-stage LLM orchestration overlay for Windsurf, utilizing a cost-optimized SLM to autonomously engineer high-fidelity prompts; reduced token consumption and improved code-generation accuracy by 25%.</span>
+                  <span>Engineered a multi-stage AI orchestration pipeline utilizing SLM on AWS Bedrock for real-time semantic filtering of 500k+ logs, reducing operational token costs by 25%.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Engineered a context-driven AI screen reader using multimodal LLMs, improving navigational efficiency for visually challenged users by 45% through real-time semantic analysis of dynamic UI elements rather than static OCR.</span>
+                  <span>Re-engineered API traffic management layers to support high-frequency AI agent requests, tuning Circuit Breaker thresholds to protect monolith stability.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Scaled backend services to handle 100K+ requests/month, reducing P99 latency by implementing Redis caching strategies and optimizing complex SQL joins.</span>
+                  <span>Developed a Context Optimizer that dynamically transformed verbose responses from internal Java modules into structured data for LLM ingestion.</span>
                 </li>
               </ul>
             </div>
@@ -275,20 +279,20 @@ export default function App() {
               <ul className="space-y-3 text-[#4a4a4a] leading-relaxed">
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Designed the database schema (MySQL) and backend architecture for a career profiling platform.</span>
+                  <span>Designed the database schema and backend architecture for a career profiling platform.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Developed robust Java (Spring Boot) REST endpoints to handle user data processing, ensuring ACID compliance and data integrity during concurrent updates.</span>
+                  <span>Developed robust REST endpoints to handle user data processing, ensuring ACID compliance.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Integrated backend services with React frontends, debugging cross-origin (CORS) issues and optimizing JSON payload sizes for faster rendering.</span>
+                  <span>Integrated backend services with React frontends, debugging cross-origin issues and optimizing JSON payload sizes for faster rendering.</span>
                 </li>
               </ul>
             </div>
 
-            {/* Accenture */}
+            {/* Accenture Solutions */}
             <div className="mb-12 p-6 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300 -mx-6">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                 <div>
@@ -303,15 +307,15 @@ export default function App() {
               <ul className="space-y-3 text-[#4a4a4a] leading-relaxed">
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Maintained and enhanced enterprise Java (Spring Boot) applications, focusing on service-layer logic and business rule implementation.</span>
+                  <span>Maintained and enhanced enterprise Java application, focusing on service-layer logic and business rule implementation.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Refactored legacy SQL queries and added indexing, which resulted in a 20% reduction in server response time for critical reporting modules.</span>
+                  <span>Worked on report analysis using SQL and optimizing SQL queries for faster data retrieval.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Automated backend testing workflows, increasing code coverage and reducing regression bugs in production releases.</span>
+                  <span>Wrote test cases increasing code coverage and reducing regression bugs in production releases.</span>
                 </li>
               </ul>
             </div>
@@ -329,7 +333,7 @@ export default function App() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold text-[#1a1a1a] mb-12 hover:text-[#2d5f3f] transition-colors duration-300 cursor-default">Education</h2>
-            
+
             <div className="space-y-8">
               <div className="pb-8 border-b border-[#2d5f3f]/10 p-6 rounded-lg hover:bg-[#fafaf8] hover:shadow-sm transition-all duration-300 -mx-6">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
@@ -382,10 +386,10 @@ export default function App() {
           >
             <h2 className="text-3xl font-bold text-[#1a1a1a] mb-8">Get In Touch</h2>
             <p className="text-lg text-[#4a4a4a] mb-8 max-w-2xl">
-              I'm currently open to new opportunities and interesting projects. 
+              I'm currently open to new opportunities and interesting projects.
               Feel free to reach out if you'd like to discuss potential collaborations or just want to connect.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6">
               <a
                 href="mailto:shriyathai7@gmail.com"
@@ -396,7 +400,7 @@ export default function App() {
                 </div>
                 <span>shriyathai7@gmail.com</span>
               </a>
-              
+
               <a
                 href="tel:+919959771199"
                 className="inline-flex items-center gap-3 text-[#4a4a4a] hover:text-[#2d5f3f] transition-colors group"
