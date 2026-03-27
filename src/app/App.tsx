@@ -243,23 +243,23 @@ export default function App() {
               <ul className="space-y-3 text-[#4a4a4a] leading-relaxed">
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Architected a Node.js MCP with AI agents enabling secure real-time data retrieval and automating 65% of technical troubleshooting workflows.</span>
+                  <span>Designed and developed RESTful APIs serving 100K+ requests/month, delivering real-time data and architected for high reliability and low latency.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Optimized shared database throughput for 100K+ monthly requests by implementing Redis look-aside caching and refactoring legacy SQL joins, reducing P99 latency by 25%.</span>
+                  <span>Refactored backend modules for better readability, maintainability, and unit test coverage, reducing production issues by 15%.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Engineered a multi-stage AI orchestration pipeline utilizing SLM on AWS Bedrock for real-time semantic filtering of 500k+ logs, reducing operational token costs by 25%.</span>
+                  <span>Engineered efficient database schemas and optimized complex SQL queries, improving data retrieval speeds and supporting large-scale user operations.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Re-engineered API traffic management layers to support high-frequency AI agent requests, tuning Circuit Breaker thresholds to protect monolith stability.</span>
+                  <span>Improved client-server integration to streamline API contracts, cutting payload sizes by 20% and enhanced user experience.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#2d5f3f] mt-1.5">•</span>
-                  <span>Developed a Context Optimizer that dynamically transformed verbose responses from internal Java modules into structured data for LLM ingestion.</span>
+                  <span>Built fault-tolerant services with retry mechanisms, graceful error handling, and logging improvements, strengthening system resilience under variable load.</span>
                 </li>
               </ul>
             </div>
